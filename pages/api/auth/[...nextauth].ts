@@ -17,7 +17,8 @@ export const authOptions: NextAuthOptions = {
         username: { label: "Username", type: "text", placeholder: "username" },
         password: { label: "Password", type: "password" }
       },
-      async authorize(credentials, _req) { // Rename req to _req to mark it as unused
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      async authorize(credentials, _req) {
         // For demonstration purposes, allow any non-empty credentials.
         // In production, replace this with your own user validation logic.
         if (credentials?.username && credentials?.password) {
